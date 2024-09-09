@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Based on Device</title>
+    <script>
+      function redirectBasedOnDevice() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Check if Android device
+        if (/android/i.test(userAgent)) {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.superfam.app";
+        }
+        // Check if iOS device (iPhone, iPad, or iPod)
+        else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "https://www.superfam.app";
+        }
+        // Else redirect to website
+        else {
+          window.location.href = "https://www.superfam.app";
+        }
+      }
+    </script>
+</head>
+<body onload="redirectBasedOnDevice()">
+<h1>Redirecting...</h1>
+<p>If you are not redirected automatically, please click <a href="https://www.superfam.app">here</a>.</p>
+</body>
+</html>
