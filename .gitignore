@@ -105,3 +105,5 @@ fabric.properties
 *.xhtml
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,web
+
+**/.DS_Store
