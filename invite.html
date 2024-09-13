@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="SuperFam">
+    <meta name="description" content="Your family member has invited you to join them on SuperFam!">
+    <meta name="keywords" content="family, documents, vault, security">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta property="og:title" content="SuperFam" />
+    <meta property="og:image" content="/assets/meta_title.jpg" />
+    <meta name="twitter:image" content="/assets/meta_title.jpg" />
+    <script>
+      function redirectBasedOnDevice() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Check if Android device
+        if (/android/i.test(userAgent)) {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.superfam.app";
+        }
+        // Check if iOS device (iPhone, iPad, or iPod)
+        else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "https://www.superfam.app";
+        }
+        // Else redirect to website
+        else {
+          window.location.href = "https://www.superfam.app";
+        }
+      }
+    </script>
+</head>
+<body onload="redirectBasedOnDevice()">
+<h1>Redirecting...</h1>
+<p>If you are not redirected automatically, please click <a href="https://www.superfam.app">here</a>.</p>
+</body>
+</html>
