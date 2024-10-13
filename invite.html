@@ -9,30 +9,115 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    <meta property="og:title" content="SuperFam" />
-    <meta property="og:image" content="/assets/meta_title.jpg" />
-    <meta name="twitter:image" content="/assets/meta_title.jpg" />
+    <meta property="og:title" content="SuperFam"/>
+    <meta property="og:image" content="/assets/meta_title.jpg"/>
+    <meta name="twitter:image" content="/assets/meta_title.jpg"/>
     <script>
       function redirectBasedOnDevice() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        let finalLocation = "https://www.superfam.app";
+        let userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
         // Check if Android device
         if (/android/i.test(userAgent)) {
-          window.location.href = "https://play.google.com/store/apps/details?id=com.superfam.app";
+          finalLocation = "https://play.google.com/store/apps/details?id=com.superfam.app";
         }
         // Check if iOS device (iPhone, iPad, or iPod)
         else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          window.location.href = "https://www.superfam.app";
+          finalLocation = "https://www.superfam.app";
         }
-        // Else redirect to website
-        else {
-          window.location.href = "https://www.superfam.app";
-        }
+        setTimeout(function () {
+          window.location.href = finalLocation;
+        }, 2000);
       }
     </script>
 </head>
+<style>
+    body {
+        background: radial-gradient(white, rgb(2, 132, 199));
+        height: 100vh;
+        /*background-color: red;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vh;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .img-container {
+        height: 125px;
+        width: 125px;
+        border: black;
+        border-radius: 30px;
+        overflow: hidden;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .img-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: inherit;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links a {
+        margin: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+</style>
 <body onload="redirectBasedOnDevice()">
-<h1>Redirecting...</h1>
-<p>If you are not redirected automatically, please click <a href="https://www.superfam.app">here</a>.</p>
+<div class="container">
+    <div class="img-container">
+        <img alt="SuperFam" loading="lazy"
+             decoding="async"
+             src="./assets/superfam_logo.png">
+    </div>
+    <div style="margin-top:50px">
+        <a href="https://www.superfam.app">
+            <img alt="" loading="lazy" width="180" height="40" decoding="async"
+                 src="assets/AppStore.svg">
+        </a>
+    </div>
+    <div style="margin-top:20px; margin-bottom: 20px">
+        <a href="https://play.google.com/store/apps/details?id=com.superfam.app">
+            <img alt="" loading="lazy" width="180" height="40" decoding="async"
+                 src="assets/PlayStore.svg">
+        </a>
+    </div>
+    <div class="links">
+        <a href="mailto:support@superfam.app">Contact Us</a>
+        <a href="https://www.superfam.app/tnc" target="_blank">Terms and Conditions</a>
+        <a href="https://www.superfam.app/privacy" target="_blank">Privacy Policy</a>
+    </div>
+</div>
 </body>
 </html>
