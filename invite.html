@@ -35,6 +35,13 @@
 </head>
 <style>
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
     body, .container, .store-container, .links, .top-container {
         display: flex;
         flex-direction: column;
@@ -45,12 +52,11 @@
     body {
         background: #071F3B;
         height: 100vh;
-        font-family: 'Poppins', sans-serif;
     }
 
     .container {
         height: 80vh;
-        gap: 1vh;
+        gap: 3vh;
     }
 
     @keyframes float {
@@ -64,13 +70,17 @@
 
     .top-container {
         color: white;
-        font-size: 30px;
+        font-size: 4vh;
         font-weight: 900;
     }
 
+    .top-container h1 {
+        margin: 0;
+    }
+
     .img-container {
-        height: 125px;
-        width: 125px;
+        height: 14vh;
+        width: 14vh;
         border: black;
         border-radius: 30px;
         overflow: hidden;
@@ -85,20 +95,22 @@
     }
 
     .store-container {
-        margin-top: 50px;
-        gap: 10px;
+        margin-top: 3vh;
+        gap: 1vh;
         color: white;
+        margin-bottom: 3vh;
     }
 
     .links {
-        margin-top: 100px;
-        gap: 12px;
+        margin-top: 2vh;
+        gap: 1vh;
     }
 
     .links a {
         /*margin: 10px;*/
         color: white;
         text-decoration: none;
+        font-size: 0.8rem;
     }
 
     .links a:hover {
@@ -112,14 +124,14 @@
         <div class="img-container">
             <img alt="SuperFam" loading="lazy"
                  decoding="async"
-                 src="./assets/superfam_logo.png">
+                 src="./assets/logo1.png">
         </div>
         <h1>SuperFam</h1>
     </div>
 
     <div class="store-container">
         <div>
-            <p>Available on</p>
+            <p style="margin-top: 2vh;margin-bottom: 2vh">Available on</p>
         </div>
         <div>
             <a href="https://www.superfam.app">
