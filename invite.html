@@ -10,8 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta property="og:title" content="SuperFam"/>
-    <meta property="og:image" content="/assets/meta_title.jpg"/>
-    <meta name="twitter:image" content="/assets/meta_title.jpg"/>
+    <meta property="og:image" content="https://on.superfam.app/assets/superfam_fb.jpg"/>
+    <meta name="twitter:image" content="https://on.superfam.app/assets/superfam_tw.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
     <script>
       function redirectBasedOnDevice() {
         let finalLocation = "https://www.superfam.app";
@@ -27,27 +29,27 @@
         }
         setTimeout(function () {
           window.location.href = finalLocation;
-        }, 2000);
+        }, 3000);
       }
     </script>
 </head>
 <style>
-    body {
-        background: radial-gradient(white, rgb(2, 132, 199));
-        height: 100vh;
-        /*background-color: red;*/
+
+    body, .container, .store-container, .links, .top-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
+    body {
+        background: #071F3B;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+
     .container {
         height: 80vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 1vh;
     }
 
@@ -58,6 +60,12 @@
         50% {
             transform: translateY(-10px);
         }
+    }
+
+    .top-container {
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
     }
 
     .img-container {
@@ -76,16 +84,20 @@
         border-radius: inherit;
     }
 
+    .store-container {
+        margin-top: 50px;
+        gap: 10px;
+        color: white;
+    }
+
     .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        margin-top: 100px;
+        gap: 12px;
     }
 
     .links a {
-        margin: 10px;
-        color: black;
+        /*margin: 10px;*/
+        color: white;
         text-decoration: none;
     }
 
@@ -96,22 +108,31 @@
 </style>
 <body onload="redirectBasedOnDevice()">
 <div class="container">
-    <div class="img-container">
-        <img alt="SuperFam" loading="lazy"
-             decoding="async"
-             src="./assets/superfam_logo.png">
+    <div class="top-container">
+        <div class="img-container">
+            <img alt="SuperFam" loading="lazy"
+                 decoding="async"
+                 src="./assets/superfam_logo.png">
+        </div>
+        <h1>SuperFam</h1>
     </div>
-    <div style="margin-top:50px">
-        <a href="https://www.superfam.app">
-            <img alt="" loading="lazy" width="180" height="40" decoding="async"
-                 src="assets/AppStore.svg">
-        </a>
-    </div>
-    <div style="margin-top:20px; margin-bottom: 20px">
-        <a href="https://play.google.com/store/apps/details?id=com.superfam.app">
-            <img alt="" loading="lazy" width="180" height="40" decoding="async"
-                 src="assets/PlayStore.svg">
-        </a>
+
+    <div class="store-container">
+        <div>
+            <p>Available on</p>
+        </div>
+        <div>
+            <a href="https://www.superfam.app">
+                <img alt="" loading="lazy" width="180" height="40" decoding="async"
+                     src="assets/AppStore.svg">
+            </a>
+        </div>
+        <div>
+            <a href="https://play.google.com/store/apps/details?id=com.superfam.app">
+                <img alt="" loading="lazy" width="180" height="40" decoding="async"
+                     src="assets/PlayStore.svg">
+            </a>
+        </div>
     </div>
     <div class="links">
         <a href="mailto:support@superfam.app">Contact Us</a>
