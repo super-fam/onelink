@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.superfam.app",
+      "sha256_cert_fingerprints": [
+        "A3:0E:06:D9:E4:D5:52:03:03:26:75:E0:06:7A:40:E1:F5:EA:8F:FC:44:CB:84:1B:ED:13:40:4B:DD:6E:CA:27"
+      ]
+    }
+  }
+]
